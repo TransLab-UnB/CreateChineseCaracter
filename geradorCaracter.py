@@ -32,11 +32,20 @@ def generate_chinese_char_image(unicode_char, dimension, font_path, output_path)
 
     print(f"Imagem gerada e salva em {output_path}")
 
-# Parâmetros para gerar a imagem
-unicode_char = 0x7D44  # Unicode para o caractere chinês (汉)
-dimension = 96  # Tamanho da imagem (512x512)
-font_path = "Fonts_Sung/TW-Sung-98_1.ttf"  # Caminho para a fonte Sung
-font_path = "Fonts_Kai/TW-Kai-98_1.ttf"
-output_path = f"7D44_{dimension}_gerado_kai.png"  # Caminho para salvar a imagem
+def generate_chinese_char_image_sung(unicode_char, dimension, output_path):
+    font_path = "Fonts_Sung/TW-Sung-98_1.ttf"  # Caminho para a fonte Sung
+    generate_chinese_char_image(unicode_char, dimension, font_path, output_path)
 
-generate_chinese_char_image(unicode_char, dimension, font_path, output_path)
+
+def generate_chinese_char_image_kai(unicode_char, dimension, output_path):
+    font_path = "Fonts_Kai/TW-Kai-98_1.ttf"  # Caminho para a fonte Kai
+    generate_chinese_char_image(unicode_char, dimension, font_path, output_path)
+
+
+# Parâmetros para gerar a imagem
+#unicode_char = 0x7D44  # Unicode para o caractere chinês (汉)
+#dimension = 96  # Tamanho da imagem (512x512)
+#font_path = "Fonts_Sung/TW-Sung-98_1.ttf"  # Caminho para a fonte Sung
+#font_path = "Fonts_Kai/TW-Kai-98_1.ttf"
+#output_path = f"7D44_{dimension}_gerado_kai.png"  # Caminho para salvar a imagem
+#generate_chinese_char_image(unicode_char, dimension, font_path, output_path)
